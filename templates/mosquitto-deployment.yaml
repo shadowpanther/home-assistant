@@ -1,6 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  annotations:
+    keel.sh/policy: all
+    keel.sh/pollSchedule: '@every 5m'
+    keel.sh/trigger: poll
   name: mosquitto
   namespace: homeassistant
 spec:
