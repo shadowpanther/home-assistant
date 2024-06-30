@@ -10,6 +10,6 @@ spec:
   selector:
     app: z2m
   ports:
-  - port: 8080
+  - port: 8081
     targetPort: 8080
     protocol: TCP

@@ -18,7 +18,7 @@ spec:
         image: koenkk/zigbee2mqtt:latest
         env:
           - name: TZ
-            value: Europe/London
+            value: Europe/Belgrade
           - name: ZIGBEE2MQTT_CONFIG_MQTT_SERVER
             value: "mqtt://mosquitto-service.homeassistant.svc.cluster.local:8883"
           - name: ZIGBEE2MQTT_CONFIG_MQTT_USER
