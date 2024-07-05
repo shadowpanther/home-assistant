@@ -42,6 +42,13 @@ spec:
             mountPath: /run/udev
           - name: ttyacm
             mountPath: /dev/ttyACM0
+        resources:
+          requests:
+            memory: 256Mi
+            cpu: 100m
+          limits:
+            memory: 1Gi
+            cpu: 1
       volumes:
         - name: z2m-data
           persistentVolumeClaim:
@@ -52,3 +59,4 @@ spec:
         - name: ttyacm
           hostPath:
             path: /dev/ttyACM0
+
