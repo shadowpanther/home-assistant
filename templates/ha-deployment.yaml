@@ -22,7 +22,7 @@ spec:
         kubernetes.io/hostname: spottypi
       containers:
       - name: homeassistant
-        image: homeassistant/home-assistant:stable
+        image: homeassistant/home-assistant:2024.7.0
         ports:
           - containerPort: 8123
         resources: {}
