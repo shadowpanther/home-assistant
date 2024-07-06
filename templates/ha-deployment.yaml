@@ -12,6 +12,8 @@ spec:
   selector:
     matchLabels:
       app: homeassistant-label
+  strategy:
+    type: Recreate
   template:
     metadata:
       labels:
