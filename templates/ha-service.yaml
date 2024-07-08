@@ -3,10 +3,12 @@ kind: Service
 metadata:
   name: homeassistant-service
   namespace: homeassistant
+  labels:
+    app: homeassistant-label
 spec:
   selector:
     app: homeassistant-label
   ports:
   - name: homeassistant
     port: 8123
-    targetPort: 8123
+    targetPort: homeassistant
