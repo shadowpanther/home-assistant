@@ -46,9 +46,11 @@ spec:
             mountPath: /dev/ttyACM0
         resources:
           requests:
+            akri.sh/cc2538: 1
             memory: 256Mi
             cpu: 100m
           limits:
+            akri.sh/cc2538: 1
             memory: 1Gi
             cpu: 1
       volumes:
