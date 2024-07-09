@@ -5,6 +5,7 @@ metadata:
   namespace: homeassistant
   labels:
     app: homeassistant-label
+    prometheusAgent: yandex-cloud
 spec:
   selector:
     matchLabels:
