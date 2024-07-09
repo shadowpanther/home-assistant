@@ -33,7 +33,7 @@ spec:
           - mountPath: /config
             name: homeassistant-pv-config
           - mountPath: /etc/localtime
-            name: homeassistant-pv-time
+            name: localtime
             readOnly: true
         resources:
           requests:
@@ -47,8 +47,7 @@ spec:
         - name: homeassistant-pv-config
           persistentVolumeClaim:
             claimName: homeassistant-pv-config
-        - name: homeassistant-pv-time
-          persistentVolumeClaim:
-            claimName: homeassistant-pv-time
-            readOnly: true
+        - name: localtime
+          hostPath:
+            path: /etc/localtime
 status: {}
