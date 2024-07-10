@@ -16,7 +16,7 @@ spec:
           service:
             name: homeassistant-service
             port:
-              number: 8123
+              name: homeassistant
   - host: z2m.homeassistant.local
     http:
       paths:
@@ -26,7 +26,7 @@ spec:
           service:
             name: z2m-service
             port:
-              number: 8081
+              name: z2m
   - host: mqtt.homeassistant.local
     http:
       paths:
@@ -36,4 +36,4 @@ spec:
           service:
             name: mosquitto-service
             port:
-              number: 8883
+              name: mqtt

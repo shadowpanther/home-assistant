@@ -37,6 +37,7 @@ spec:
           privileged: true
         ports:
           - containerPort: 8080
+            name: z2m
         volumeMounts:
           - name: z2m-data
             mountPath: /app/data

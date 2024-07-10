@@ -21,8 +21,10 @@ spec:
       - name: mosquitto
         image: eclipse-mosquitto:2.0.18
         ports:
-        - containerPort: 8883
-        - containerPort: 9001
+        - name: mqtt
+          containerPort: 8883
+        - name: websockets
+          containerPort: 9001
         volumeMounts:
         - mountPath: /mosquitto/config/
           name: config
