@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: z2m
-        image: koenkk/zigbee2mqtt:1.39.0
+        image: koenkk/zigbee2mqtt:1.42.0
         env:
           - name: TZ
             value: Europe/Belgrade
@@ -64,4 +64,8 @@ spec:
         - name: ttyacm
           hostPath:
             path: /dev/ttyACM0
+      tolerations:
+        - key: LowResource
+          operator: Exists
+          effect: NoSchedule
 
